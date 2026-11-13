@@ -1,0 +1,336 @@
+[gd_scene format=3 uid="uid://dgdabjqwnvva0"]
+
+[ext_resource type="Script" uid="uid://cqnd8btf44ro8" path="res://CharacterMovement.gd" id="1_htc0j"]
+[ext_resource type="Texture2D" uid="uid://cbelt1ui84t7l" path="res://Assets/Character PNG's/Dilara.png" id="2_kw88b"]
+[ext_resource type="Script" uid="uid://bem85cpx2cfs8" path="res://Camera.gd" id="3_70a2y"]
+[ext_resource type="Texture2D" uid="uid://cv64qk0l7tc10" path="res://Assets/Object PNG's/Zemin.png" id="4_fbplc"]
+[ext_resource type="Texture2D" uid="uid://bstncn7ko26tc" path="res://Assets/Object PNG's/Dilara Oda Tavan.png" id="5_b5r4t"]
+[ext_resource type="Texture2D" uid="uid://osxe7ue2qnv1" path="res://Assets/Object PNG's/Dilara Oda Arka Duvar.png" id="6_kt27i"]
+[ext_resource type="Texture2D" uid="uid://df76kli73xg20" path="res://Assets/Object PNG's/Dilara Oda Yan Duvar.png" id="7_6ijrg"]
+[ext_resource type="Texture2D" uid="uid://bo26pel3r11eg" path="res://Assets/Object PNG's/Dilara Oda Yan Duvar Kapı + buton.png" id="7_h4u4x"]
+[ext_resource type="Texture2D" uid="uid://dw3pygvctf0iu" path="res://Assets/Object PNG's/Dilara Oda Yatak Yan Kısım.png" id="8_q11u5"]
+[ext_resource type="Texture2D" uid="uid://dn285eif64re0" path="res://Assets/Object PNG's/Dilara Oda Yatak Üst Kısım.png" id="9_6ncup"]
+[ext_resource type="Texture2D" uid="uid://bvvjggrc05hro" path="res://Assets/Object PNG's/Dilara Oda Yatakan Ön Kısım.png" id="10_h4u4x"]
+[ext_resource type="Texture2D" uid="uid://rd6qtmb3ekbk" path="res://Assets/Object PNG's/Dilara Oda Dolap Yan.png" id="11_6ijrg"]
+[ext_resource type="Texture2D" uid="uid://ytiscyxch63o" path="res://Assets/Object PNG's/Dilara Oda Yatak Bası.png" id="11_q11u5"]
+[ext_resource type="Texture2D" uid="uid://xe8d5wujw355" path="res://Assets/Object PNG's/Dilara Oda Dolap.png" id="11_vf2j1"]
+[ext_resource type="Texture2D" uid="uid://bsfto8laq4aq6" path="res://Assets/Object PNG's/Dilara Oda Masa.png" id="12_ee5j3"]
+[ext_resource type="Texture2D" uid="uid://dsrflrvekm36" path="res://Assets/Object PNG's/Dilara Odası Pano.png" id="13_2uw0i"]
+[ext_resource type="Texture2D" uid="uid://ba17kjttoc3dt" path="res://Assets/Object PNG's/Dilara Oda Masa Yan Kısım.png" id="13_fbplc"]
+[ext_resource type="Texture2D" uid="uid://qtcdbr4fid55" path="res://Assets/Object PNG's/Dilara Oda Bitki 1.png" id="14_0e4ov"]
+[ext_resource type="Texture2D" uid="uid://bhuwqs313exw6" path="res://Assets/Object PNG's/Dilara Oda Masa Üst.png" id="14_b5r4t"]
+[ext_resource type="Texture2D" uid="uid://b5e1k70yvc7wr" path="res://Assets/Object PNG's/Dilara Oda Pano Yan.png" id="15_kt27i"]
+[ext_resource type="Texture2D" uid="uid://cbmwo1koexsiq" path="res://Assets/Object PNG's/Dilara Oda Ayna.png" id="18_vf2j1"]
+[ext_resource type="Texture2D" uid="uid://cily8yjvyufkk" path="res://Assets/Object PNG's/Dilara Oda Lamba.png" id="20_6ncup"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_70a2y"]
+height = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htc0j"]
+albedo_color = Color(0.985176, 0, 0.18023303, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxovb"]
+albedo_color = Color(0.2192778, 0.7056041, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uyr48"]
+albedo_color = Color(0.72219366, 0.38481367, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h7yai"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70a2y"]
+albedo_color = Color(0.92292446, 0.48651618, 0, 1)
+
+[node name="Dilara\'sRoom" type="Node3D" unique_id=1756535134]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1467245892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11586809, 2.1342258, 1.5488098)
+script = ExtResource("1_htc0j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=162268744]
+shape = SubResource("CapsuleShape3D_70a2y")
+debug_color = Color(0.4543401, 0.52611536, 0.7480006, 0.41960785)
+
+[node name="Sprite3D" type="Sprite3D" parent="CharacterBody3D" unique_id=749171052]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("2_kw88b")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1761821580 node_paths=PackedStringArray("player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2728853, 3.4550009, 5.8432717)
+top_level = true
+script = ExtResource("3_70a2y")
+player = NodePath("../CharacterBody3D")
+min_x = -4.981
+max_x = 6.273
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=346723351]
+transform = Transform3D(0.98444116, -0.170244, 0.04350413, 0.15806527, 0.9661357, 0.20395394, -0.07675283, -0.19390415, 0.9780134, 1.295157, 13.602575, 6.7688036)
+
+[node name="Zemin" type="Node3D" parent="." unique_id=46868836]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Zemin" unique_id=1738136930]
+
+[node name="Zemin Objectholder" type="CSGBox3D" parent="Zemin" unique_id=1316805665]
+visible = false
+use_collision = true
+size = Vector3(15, 0.1, 10)
+
+[node name="Sprite3D" type="Sprite3D" parent="Zemin" unique_id=1020288972]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("4_fbplc")
+
+[node name="Tavan" type="Node3D" parent="." unique_id=688005951]
+
+[node name="Tavan Objectholder" type="CSGBox3D" parent="Tavan" unique_id=1268078630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+visible = false
+use_collision = true
+size = Vector3(15, 0.1, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tavan" unique_id=1317398539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Tavan" unique_id=122530058]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 8, 0)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("5_b5r4t")
+
+[node name="Arka Duvar" type="Node3D" parent="." unique_id=998441087]
+
+[node name="Arka Duvar Objectholder" type="CSGBox3D" parent="Arka Duvar" unique_id=277716203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -5)
+visible = false
+use_collision = true
+size = Vector3(15, 8, 0.1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arka Duvar" unique_id=1775331030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -5)
+
+[node name="Sprite3D" type="Sprite3D" parent="Arka Duvar" unique_id=1384446254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -5)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("6_kt27i")
+
+[node name="Sağ Duvar" type="Node3D" parent="." unique_id=671798916]
+
+[node name="Sağ DuvarObjectholder" type="CSGBox3D" parent="Sağ Duvar" unique_id=335473926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4, 0)
+visible = false
+use_collision = true
+size = Vector3(0.1, 8, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sağ Duvar" unique_id=508275151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 4, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Sağ Duvar" unique_id=549130680]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.5, 4, 0)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_h4u4x")
+
+[node name="Sol Duvar" type="Node3D" parent="." unique_id=1579021289]
+
+[node name="Sol Duvar Objectholder" type="CSGBox3D" parent="Sol Duvar" unique_id=697997087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 4, 0)
+visible = false
+use_collision = true
+size = Vector3(0.1, 8, 10)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol Duvar" unique_id=377673167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 4, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Sol Duvar" unique_id=2010065967]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.5, 4, 0)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("7_6ijrg")
+
+[node name="Yatak" type="Node3D" parent="." unique_id=310986303]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Yatak" unique_id=2130562188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45, 0.8, 0.886)
+
+[node name="Yatak Objectholder" type="CSGBox3D" parent="Yatak" unique_id=242616266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.8, 0.886)
+visible = false
+use_collision = true
+size = Vector3(6, 1.5, 4)
+material = SubResource("StandardMaterial3D_htc0j")
+
+[node name="yatak yan" type="Sprite3D" parent="Yatak" unique_id=1058051412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0.8, 2.886)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("8_q11u5")
+
+[node name="yatak üst" type="Sprite3D" parent="Yatak" unique_id=1256148898]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -4.5, 1.55, 0.886)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("9_6ncup")
+
+[node name="yatak ön" type="Sprite3D" parent="Yatak" unique_id=709829372]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.5, 0.8, 0.886)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("10_h4u4x")
+
+[node name="yatak ön2" type="Sprite3D" parent="Yatak" unique_id=38992733]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.499, 2, 0.886)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_q11u5")
+
+[node name="Dolap" type="Node3D" parent="." unique_id=1204014695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45, 0.801, 2.8869998)
+
+[node name="Dolap Objectholder" type="CSGBox3D" parent="Dolap" unique_id=1132537224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.65, 2.249, -6.837)
+visible = false
+use_collision = true
+size = Vector3(4, 6, 2)
+material = SubResource("StandardMaterial3D_kxovb")
+
+[node name="Dolap Yan" type="Sprite3D" parent="Dolap" unique_id=1839380012]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.6499996, 2.249, -6.837)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_6ijrg")
+
+[node name="Dolap Ön" type="Sprite3D" parent="Dolap" unique_id=1109759823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.65, 2.249, -5.837)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("11_vf2j1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Dolap" unique_id=120023677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.65, 2.249, -6.837)
+
+[node name="Masa" type="Node3D" parent="." unique_id=1156304716]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45, 0.801, 2.8869998)
+
+[node name="MasaObjectholder" type="CSGBox3D" parent="Masa" unique_id=1884505130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45, 0.2, -6.837)
+visible = false
+use_collision = true
+size = Vector3(4, 2, 2)
+material = SubResource("StandardMaterial3D_uyr48")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Masa" unique_id=1386437910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45, 0.24899995, -6.837)
+shape = SubResource("BoxShape3D_h7yai")
+
+[node name="masa sol yan" type="Sprite3D" parent="Masa" unique_id=509346383]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.45, 0.2, -6.88)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_fbplc")
+
+[node name="masa sağ yan" type="Sprite3D" parent="Masa" unique_id=903511766]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.45, 0.2, -6.88)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_fbplc")
+
+[node name="masa ön" type="Sprite3D" parent="Masa" unique_id=589288140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45, 0.2, -5.88)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_ee5j3")
+
+[node name="masa arka" type="Sprite3D" parent="Masa" unique_id=629924401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.45, 0.2, -7.835)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("12_ee5j3")
+
+[node name="masa üst" type="Sprite3D" parent="Masa" unique_id=115915935]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 5.45, 1.2, -6.88)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_b5r4t")
+
+[node name="Pano" type="Node3D" parent="." unique_id=720639463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45, 0.801, 2.8869998)
+
+[node name="Pano ObjectHolder" type="CSGBox3D" parent="Pano" unique_id=1417204982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.656, 2.699, -7.83)
+visible = false
+use_collision = true
+size = Vector3(4, 4, 0.1)
+material = SubResource("StandardMaterial3D_70a2y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pano" unique_id=1690967629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65600014, 2.699, -7.83)
+
+[node name="Pano Sağ" type="Sprite3D" parent="Pano" unique_id=73625790]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.6560001, 2.699, -7.83)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("15_kt27i")
+
+[node name="Pano Sol" type="Sprite3D" parent="Pano" unique_id=495565116]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.3439999, 2.699, -7.83)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("15_kt27i")
+
+[node name="Pano Ön" type="Sprite3D" parent="Pano" unique_id=910639433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65600014, 2.699, -7.7799997)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("13_2uw0i")
+
+[node name="2D Dekarasyon" type="Node3D" parent="." unique_id=1087525783]
+
+[node name="Bitki" type="Sprite3D" parent="2D Dekarasyon" unique_id=233683861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.449, 1.701, -4.3950005)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_0e4ov")
+
+[node name="Bitki2" type="Sprite3D" parent="2D Dekarasyon" unique_id=1077904081]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.1780005, 1.701, 2.7068686)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("14_0e4ov")
+
+[node name="Lamba" type="Sprite3D" parent="2D Dekarasyon" unique_id=1955341012]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 6.65, 0)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("20_6ncup")
+
+[node name="ayna" type="Sprite3D" parent="2D Dekarasyon" unique_id=861427826]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.499, 3.585063, -1.8787339)
+pixel_size = 0.03125
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("18_vf2j1")
